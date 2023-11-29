@@ -14,7 +14,7 @@ class Category(db.Model):
 class Task(db.Model):
     # schema for the task model
     id = db.Column(db.Integer, primary_key=True)
-    task = db.Column(db.String(50), unique=True, nullable=False)
+    task_name = db.Column(db.String(50), unique=True, nullable=False)
     task_description = db.Column(db.Text, nullable=False)
     is_urgent = db.Column(db.Boolean, default=False, nullable = False)
     due_date = db.Column(db.Date, nullable=False)
